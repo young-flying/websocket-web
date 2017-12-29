@@ -33,6 +33,10 @@ error: Cannot load configuration class: org.mybatis.spring.boot.autoconfigure.My
 这个一看就懂，移动就会用，其中一定要引入数据库驱动jar包
 2.4 执行 工程右键 Debug As -> maven build... -> mybatis-generator:generate
 
+3.junit 创建测试类的时候在默认test目录下 结果老是报错 
+解决方案 src/test/java 下的包名要和src/main/java/下的包名相同
+
+http://blog.csdn.net/g960806/article/details/78443691
 
 启动：
 启动类 ：org.jewi.work下的Application
