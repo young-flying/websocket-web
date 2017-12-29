@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class TestPageHelper {
 
     @Test
-    public void findOne() throws Exception {
+    public void findOne() {
     	System.out.println("567890-=");
     }
 }
