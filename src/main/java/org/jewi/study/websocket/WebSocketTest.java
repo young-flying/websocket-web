@@ -1,4 +1,4 @@
-package me.gacl.websocket;
+package org.jewi.study.websocket;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,8 +11,6 @@ import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
-
-import org.jewi.study.utils.StringUtils;
 
 /**
  * @ServerEndpoint 注解是一个类层次的注解，它的功能主要是将目前的类定义成一个websocket服务器端,
@@ -70,7 +68,7 @@ public class WebSocketTest {
         	System.out.println("格式不正确");
         	return;
         } else if(len == 1 && message.equals("username")) {
-        	name = StringUtils.strandGenerator(9);
+        	name = "abc";
         	sendToClient(session,name);
         	saveSession(name, session);
         	return;
