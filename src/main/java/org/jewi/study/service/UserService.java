@@ -1,16 +1,16 @@
 package org.jewi.study.service;
 
-import java.util.Map;
+import java.util.List;
 
 import org.jewi.study.entity.User;
-import org.jewi.study.utils.Page;
 
 public interface UserService {
 	int add(User user);
     int update(User user);
     int deleteById(long userId);
     User queryUserById(Long user);
-    Page queryUserList(Map<String,Object> params);
+    
+    List<User> queryList(int pageNum,int pageSize);
     
     /**
      * 登陆

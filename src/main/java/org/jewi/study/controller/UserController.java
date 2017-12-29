@@ -1,15 +1,10 @@
 package org.jewi.study.controller;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.jewi.study.entity.User;
 import org.jewi.study.service.UserService;
-import org.jewi.study.utils.Page;
 import org.jewi.study.utils.ServletUtil;
 import org.jewi.study.utils.StringUtil;
 import org.slf4j.Logger;
@@ -27,27 +22,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
-	
-	@RequestMapping(value = "/queryList",method = RequestMethod.POST,produces="application/json;charset=UTF-8")
-    @ResponseBody
-    public void queryLearnList(HttpServletRequest request ,HttpServletResponse response){
-        String page = request.getParameter("page"); // 取得当前页数,注意这是jqgrid自身的参数
-        String rows = request.getParameter("rows"); // 取得每页显示行数，,注意这是jqgrid自身的参数
-        String username = request.getParameter("username");
-        String phone = request.getParameter("phone");
-        Map<String,Object> params = new HashMap<String,Object>();
-        params.put("page", page);
-        params.put("rows", rows);
-        params.put("username", username);
-        params.put("phone", phone);
-        Page pageObj =userService.queryUserList(params);
-        List<Map<String, Object>> learnList=pageObj.getResultList();
-        JSONObject jo=new JSONObject();
-        jo.put("rows", learnList);
-        jo.put("total", pageObj.getTotalPages());
-        jo.put("records", pageObj.getTotalRows());
-        ServletUtil.createSuccessResponse(200, jo, response);
-    }
 	
 	/**
      * 新添用户
