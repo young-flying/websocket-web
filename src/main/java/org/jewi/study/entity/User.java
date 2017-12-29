@@ -1,5 +1,9 @@
 package org.jewi.study.entity;
 
+/**
+ * @author renjw
+ * @Date 2017年12月29日 下午5:41:40 
+ */
 public class User {
     private Long id;
 
@@ -40,4 +44,10 @@ public class User {
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
     }
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", phone=" + phone + "]";
+	}
+    
 }

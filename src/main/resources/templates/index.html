@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+            font-size: 100%;
+        }
+        ul, ol, li {
+            list-style: none;
+        }
+        .crossbanenr ul {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            /* max-width: 1920px; */
+            min-width: 1007px;
+            margin: 0 auto;
+        }
+        .crossbanenr li {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 1920px;
+            height: 100%;
+            margin: 0 0 0 -960px;
+            display: none;
+            z-index: 1;
+        }
+        .crossbanenr li.timbg {
+            display: block;
+            background: transparent url(//sqimg.qq.com/qq_product_operations/im/2016/pc/tim03/tim_bg_1.jpg) no-repeat center center;
+            background-size: cover;
+            left: 0;
+            top: 0;
+            width: 100%;
+            margin: 0;
+        }
+        .tim .bnleft {
+            padding-top: 6%;
+        }
+        .tim-wenzi {
+                background: url(//sqimg.qq.com/qq_product_operations/im/2016/pc/tim03/logo-s.png) no-repeat center top;
+                width: 220px;
+                height: 124px;
+        }
+        .topbar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 150px;
+            /* background: transparent url(//sqimg.qq.com/qq_product_operations/im/2015/lineartop.png) repeat-x center top; */
+            z-index: 900;
+        }
+        .toppic {
+            max-width: 1170px;
+            min-width: 980px;
+            width: 80%;
+            height: 75px;
+            margin: 0 auto;
+        }
+        .topside {
+            float: left;
+            width: 59%;
+        }
+        .toppic a:link, .toppic a:visited {
+            /* color: #fff; */
+            color: #333;
+        }
+        a:link, a:visited {
+            color: #333;
+            text-decoration: none;
+        }
+        .logoLink {
+            float: left;
+            display: block;
+            width: 106px;
+            height: 0px;
+            overflow: hidden;
+            padding-top: 76px;
+            font-size: 0;
+            background: transparent url(//sqimg.qq.com/qq_product_operations/im/qqlogo/imlogo_b.png) no-repeat left 15px;
+        }
+        .topNav {
+            float: left;
+            width: 450px;
+            padding-left: 18px;
+        }
+        .topNav li {
+            float: left;
+            margin-left: 20px;
+        }
+        .topTool {
+            float: right;
+            width: 320px;
+            font-size: 0.875em;
+        }
+        .topTool a.barzc {
+            float: left;
+            width: 96px;
+            height: 0;
+            overflow: hidden;
+            padding: 39px 0 0 0;
+            margin: 18px 0 0 0;
+            background: transparent url(//sqimg.qq.com/qq_product_operations/im/2015/icons.png) no-repeat 0 -244px;
+            text-align: center;
+            line-height: 39px;
+            color: #fff;
+        }
+        .toppic a:link, .toppic a:visited {
+            /* color: #fff; */
+            color: #333;
+        }
+        a:link, a:visited {
+            color: #333;
+            text-decoration: none;
+        }
+        .topTool ul {
+            float: right;
+            height: 40px;
+            padding-top: 6px;
+        }
+        .topTool li {
+            float: right;
+            margin-left: 30px;
+            position: relative;
+            line-height: 40px;
+        }
+        .flashData {
+            float: right;
+            line-height: 17px;
+            text-align: right;
+            letter-spacing: 0.04em;
+        }
+        .toppic a:link, .toppic a:visited {
+            /* color: #fff; */
+            color: #333;
+        }
+        a:link, a:visited {
+            color: #333;
+            text-decoration: none;
+        }
+        em {
+            font-style: normal;
+        }
+        .loginPenel {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            width: 120px;
+            height: 85px;
+            z-index: 100;
+        }
+        .toppic a:link, .toppic a:visited {
+            /* color: #fff; */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<div id="topbar" class="topbar">
+    <div class="toppic">
+        <div class="topside">
+            <a href="index.shtml" class="logoLink" pgv="im.index2015.logo">im.qq.com</a>
+            <ul id="topNav" class="topNav">
+                <li class="current"><a pgv="im.index2015.homepage" href="http://im.qq.com/">首页</a></li>
+                <li class=""><a pgv="im.index2015.download" href="http://im.qq.com/download/">下载</a></li>
+                <li class=""><a pgv="im.index2015.active" href="http://im.qq.com/album/">动态</a></li>
+            </ul>
+        </div>
+        <div class="topTool">
+            <a class="barzc" pgv="im.index2015.zuce" href="http://zc.qq.com/chs/index.html" target="_blank">注册</a>
+            <ul>
+                <li id="loginInfo">
+                    <a pgv="im.qq.com.login" id="login" href="#">登录</a>
+                    <div id="loginPenel" class="loginPenel">
+                        <span class="trg"></span>
+                        <div class="logindrop">
+                            <div id="nick" class="nick">Hi,飞翔的企鹅</div>
+                            <div class="lgout"><a id="lgout" href="javascript:;">[退出]</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li><a pgv="im.index2015.safe" href="http://aq.qq.com/" target="_blank">QQ安全</a></li>
+                <li><a pgv="im.index2015.vip" href="http://vip.qq.com/" target="_blank">QQ会员</a></li>
+            </ul>
+            <div class="flashData"><a pgv="im.qq.com.viewonlinedata" id="viewOnline" href="#">当前在线人数：<em id="cur_online">255,917,013</em></a></div>
+        </div>
+    </div>
+</div>
+<div class="crossbanenr wrap" style="height: 600px;">
+    <ul id="crossbanenr">
+        <li class="timbg">
+            <div class="tim-content tim">
+                <div class="bnleft">
+                    <div class="tim-wenzi"></div>
+                    <div class="tim-btn">
+                        <a href="//office.qq.com/" target="_blank" pgv="im.index2017.bannerdownload_tim"></a>
+                    </div>
+                    <div class="tim-icon"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
